@@ -1,11 +1,16 @@
  import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
+
+
 //Rutas 
 import { PAGES_ROUTES } from './pages.routes';
 
 //Modulos
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms'; //Forms, para poder usar ngModel y todo lo del Form
+import { ChartsModule } from 'ng2-charts';//Para los charts de graficos, que descargamos de ng2-charts
 
 //Componetes de la Pages
 import { DashboardComponent } from "./dashboard/dashboard.component";
@@ -13,7 +18,9 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { ProgressComponent } from './progress/progress.component'; 
 import { PagesComponent  } from "./pages.component";
 
-
+//Componentes personalizados
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component'; //Si vamos a usar un componente perzonalizado, debe estar en el modulo donde esta el componente sera llamado
+import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 
 
 @NgModule({
@@ -21,18 +28,24 @@ import { PagesComponent  } from "./pages.component";
         PagesComponent,//Esta es la principal donde se va a mover lo dash, graficas,  progress
         DashboardComponent,
         Graficas1Component,
-        ProgressComponent
+        ProgressComponent,
+        IncrementadorComponent,
+        GraficoDonaComponent
     ],
     imports: [ 
         CommonModule,
         SharedModule,//Como en el pages.component.html se usa los modulos de shared lo importamos aqui
-        PAGES_ROUTES //Estas son las rutas de los pages que la importamos en su modulo
+        PAGES_ROUTES, //Estas son las rutas de los pages que la importamos en su modulo
+        FormsModule,
+        ChartsModule
       ],
     exports: [//Los exports son como estamos en un modulo aparte si queremos que otros modulo diferente a este tenga acesso a estos componentes debempos ponerlo aqui
         PagesComponent,
         DashboardComponent,
         Graficas1Component,
-        ProgressComponent
+        ProgressComponent,
+        IncrementadorComponent,
+        GraficoDonaComponent
     ],
     providers: [],
 })
