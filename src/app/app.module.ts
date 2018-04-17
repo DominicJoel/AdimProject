@@ -6,6 +6,10 @@ import { APP_ROUTES } from './app.routes';
 
 // Modulos
 import { PagesModule } from "./pages/pages.module"; //Estos son de los modulos que tenemos aparte que lo llamamos aqui
+
+
+// Servicios Modulos
+import { ServiceModule } from './services/service.module';//Ese modulo contiene la referencia de todos los servicios
 import { FormsModule } from '@angular/forms';
 
 // Componentes
@@ -15,23 +19,18 @@ import { RegisterComponent } from './login/register.component';
 import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
 
 
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     NopagefoundComponent
-
   ],
   imports: [//Los modulos van en los imports
     BrowserModule,
     APP_ROUTES,//Las rutas principales
-    PagesModule,//iMORTAMOS LOS MODULOS DE LAS PAGES AQUI EN EL MODULO PRINCIPAL PORQUE AQUI ES QUE USAMOS LAS PAGES
+    PagesModule,//iMPORTAMOS LOS MODULOS DE LAS PAGES AQUI EN EL MODULO PRINCIPAL PORQUE AQUI ES QUE USAMOS LAS PAGES
+    ServiceModule,
     FormsModule
   ],
   providers: [],

@@ -15,12 +15,14 @@ import { ChartsModule } from 'ng2-charts';//Para los charts de graficos, que des
 //Componetes de la Pages
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { Graficas1Component } from './graficas1/graficas1.component';  
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ProgressComponent } from './progress/progress.component'; 
 import { PagesComponent  } from "./pages.component";
 
 //Componentes personalizados
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component'; //Si vamos a usar un componente perzonalizado, debe estar en el modulo donde esta el componente sera llamado
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
         Graficas1Component,
         ProgressComponent,
         IncrementadorComponent,
-        GraficoDonaComponent
+        GraficoDonaComponent,
+        AccountSettingsComponent
     ],
     imports: [ 
         CommonModule,
