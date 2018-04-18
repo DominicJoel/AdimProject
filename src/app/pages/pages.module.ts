@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 
 
-//Rutas 
+//Rutas
 import { PAGES_ROUTES } from './pages.routes';
 
 //Modulos
@@ -14,14 +14,17 @@ import { ChartsModule } from 'ng2-charts';//Para los charts de graficos, que des
 
 //Componetes de la Pages
 import { DashboardComponent } from "./dashboard/dashboard.component";
-import { Graficas1Component } from './graficas1/graficas1.component';  
+import { Graficas1Component } from './graficas1/graficas1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
-import { ProgressComponent } from './progress/progress.component'; 
+import { ProgressComponent } from './progress/progress.component';
 import { PagesComponent  } from "./pages.component";
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 //Componentes personalizados
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component'; //Si vamos a usar un componente perzonalizado, debe estar en el modulo donde esta el componente sera llamado
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+
 
 
 
@@ -33,9 +36,11 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
         ProgressComponent,
         IncrementadorComponent,
         GraficoDonaComponent,
-        AccountSettingsComponent
+        AccountSettingsComponent,
+        PromesasComponent,
+        RxjsComponent
     ],
-    imports: [ 
+    imports: [
         CommonModule,
         SharedModule,//Como en el pages.component.html se usa los modulos de shared lo importamos aqui
         PAGES_ROUTES, //Estas son las rutas de los pages que la importamos en su modulo
@@ -52,6 +57,6 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
     ],
     providers: [],
 })
-export class PagesModule {} 
+export class PagesModule {}
 
 

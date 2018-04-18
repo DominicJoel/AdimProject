@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor( public router :Router  ) { }
 
   ngOnInit() {
-    init_pluggins();//Ese init_Pluggins lo pusimos en assets/js/custom.js para que angular lo reconozca
+    init_pluggins();//Ese init_Pluggins lo pusimos en assets/js/custom.js para que angular lo reconozcal, asi todo script que esta fuera de angular le hacemos esto para que lo cargue de una vez
 
   }
 
